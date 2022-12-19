@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.di_1.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="opcion" text="alumno"/>
+    <ChoiceBox fx:id="decision" onAction="#onCambioSeleccion" prefWidth="150.0"/>
+    <ListView fx:id="lista" prefHeight="200.0" prefWidth="200.0"/>
+    <HBox fx:id="edadBox" prefHeight="108.0" prefWidth="187.0">
+        <children>
+            <Label text="EDAD"/>
+            <TextField fx:id="edadField"/>
+        </children>
+    </HBox>
+    <HBox fx:id="notaBox" prefHeight="110.0" prefWidth="289.0" spacing="10.0">
+        <children>
+            <Label text="NOTA"/>
+            <TextArea fx:id="notaField" prefHeight="200.0" prefWidth="200.0"/>
+        </children>
+        <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0"/>
+        </padding>
+    </HBox>
+    <TableView fx:id="tablaAlumnos" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="nombre" prefWidth="75.0" text="NOMBRE"/>
+            <TableColumn fx:id="apellidos" prefWidth="75.0" text="APELLIDOS"/>
+            <TableColumn fx:id="edad" prefWidth="75.0" text="EDAD"/>
+            <TableColumn fx:id="nota" prefWidth="75.0" text="NOTA"/>
+        </columns>
+    </TableView>
+
+
+</VBox>
